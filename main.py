@@ -1,6 +1,6 @@
 from InsertionSort import insertionSort
 from LinearSearch import linear_search
-from BinarySearch import binarySearch
+from BinarySearch import binarysearch
 from QuickSort import quickSort
 
 def arr():
@@ -17,7 +17,7 @@ fn = int(input("Enter your option: "))
 if fn == 1:
     l = arr()
     target = int(input("Enter the target element: "))
-    print(f"Binary Search Result: {binarySearch(l,target,0,len(l)-1)}")
+    print(f"Binary Search Result: {binarysearch(l,target)}")
 
 elif fn==2:
     l = arr()

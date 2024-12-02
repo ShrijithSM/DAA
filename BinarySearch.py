@@ -1,24 +1,3 @@
-# Binary Search in python
-
-
-def binarySearch(array, x, low, high):
-
-    # Repeat until the pointers low and high meet each other
-    while low <= high:
-
-        mid = low + (high - low)//2
-
-        if x == array[mid]:
-            return mid
-
-        elif x > array[mid]:
-            low = mid + 1
-
-        else:
-            high = mid - 1
-
-    return -1
-
 '''
 l = []
 
@@ -31,3 +10,23 @@ target = int(input("Enter the target element: "))
 
 print(binarySearch(l,target,0,len(l)-1))
 '''
+
+def binarysearch(array, target):
+    low = 0
+    high = len(array) - 1
+
+    while low <= high:
+        mid = int((low+high)//2)
+
+        if array[mid] == target:
+            return mid
+        
+        elif array[mid] < target:
+            low = mid+1
+        
+        else:
+            high= mid-1
+    return -1
+
+
+print(binarysearch([10,20,30,40,50],20))
