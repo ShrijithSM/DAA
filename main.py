@@ -1,7 +1,11 @@
-from InsertionSort import insertionSort
 from LinearSearch import linear_search
 from BinarySearch import binarysearch
+from DFS import dfs
+
+from InsertionSort import insertionSort
 from QuickSort import quickSort
+from MergeSort import merge_sort, print_list
+
 
 def arr():
     l = []
@@ -38,4 +42,12 @@ elif fn == 4:
     print("Array after Quick Sort: ")
     for val in l:
         print(val, end=" ") 
+
+elif fn == 5:
+    l = arr()
+    merge_sort(l)
+    print("Array after Merge Sort: ")
+    print_list(l)
+
+
         
